@@ -1,0 +1,222 @@
+---------------------------------read filtered---------------------------------
+
+/ugovor-rad-controller/getAllUgovorRad
+{
+  "idUgovorRad": 6
+}
+
+/radnik-controller/getAllRadnik
+{
+  "idRadnik": 6
+}
+
+/radnik-odjel-controller/getRadnikOdjelbyRadnik
+6
+
+/radnik-odjel-controller/getRadnikOdjelbyOdjel
+6
+
+/evidencija-snimka-controller/getEvidencijaSnimka
+idRadnika:6
+
+/evidencija-rad-controller/getEvidencijaRad
+6
+2025-07-01
+2025-07-15
+
+
+---------------------------------update---------------------------------
+/ugovor-rad-controller/updateUgovorRad
+{
+  "idUgovorRad": 10,
+  "radnikFk": 10,
+  "datumUgovor": "2025-07-02",
+  "datumOd": "2025-07-02",
+  "mjestoRadaFk": 10,
+  "radnoMjestoFk": 10,
+  "radnoVrijemeFk": {
+    "idRadnoVrijeme": 1,
+    "vrstaRadnoVrijemeFk": 1,
+    "tjednoSati": 40,
+    "dnevnoSati": 8,
+    "godisnji": 20
+  },
+  "vrstaUgovorRadFk": 1,
+  "brutoPlaca": 1300
+}
+
+/radno-mjesto-controller/updateRadnoMjesto
+{
+  "idRadnoMjesto": 1,
+  "naziv": "Developer/ica aplikativnih rješenja"
+}
+
+/radnik-controller/updateRadnik
+{
+  "idRadnik": 1,
+  "ime": "Luka",
+  "prezime": "Šarić",
+  "oib": "84789698705",
+  "spolFk": 1,
+  "datumRod": "2000-01-01",
+  "radnikVrstaFk": 1
+}
+
+/radnik-prebivaliste-controller/updateRadnikPrebivaliste
+{
+  "idRadnikPrebivaliste": 1,
+  "radnikFk": 1,
+  "mjestoFk": 1,
+  "ulica": "Vukovarska ulica",
+  "kucniBr": "6"
+}
+
+/radnik-odjel-controller
+{
+  "idRadnikOdjel": 1,
+  "radnikFk": 1,
+  "odjelFk": 1,
+  "datumOd": "2025-07-01"
+}
+
+/odjel-controller
+{
+  "idOdjel": 1,
+  "naziv": "Razvoj"
+}
+
+/evidencija-snimka-controller/updateEvidencijaSnimka
+{
+  "idEvidencijaSnimka": 10,
+  "datumOd": "2025-07-01",
+  "datumDo": "2024-07-31",
+  "radnikFk": 1,
+  "snimka": "dGVzdA==",
+  "datum": "2024-08-01"
+}
+
+/evidencija-rad-controller/updateEvidencijaRad
+{
+  "idEvidencijaRad": 232,
+  "radnikFk": 10,
+  "datum": "2025-07-31",
+  "pocetak": "08:00:00",
+  "kraj": "16:00:00",
+  "ukupnoRedovno": 8,
+  "redovno": 8,
+  "prekovr": 0,
+  "zastoj": 0,
+  "strajk": 0,
+  "lockout": 0,
+  "prerasp": 0,
+  "bolDo42": 0,
+  "bolOd42": 0,
+  "godisnji": 0,
+  "godisnjiPlacen": 0,
+  "praznik": 0,
+  "ukupnoSati": 8,
+  "nedjeljaPov": 0,
+  "praznikPov": 0,
+  "nocPov": 0,
+  "smjenaPov": 0,
+  "dvokrPov": 0,
+  "ostaloPov": 0,
+  "pripr": 0,
+  "odmor": 0,
+  "odsut": 0
+}
+
+---------------------------------post---------------------------------
+/ugovor-rad-controller/createUgovorRad
+{
+  "radnikFk": 10,
+  "datumUgovor": "2024-01-15",
+  "datumOd": "2024-02-01",
+  "datumDo": "2025-02-01",
+  "mjestoRadaFk": 1,
+  "radnoMjestoFk": 1,
+  "radnoVrijemeFk": {
+    "vrstaRadnoVrijemeFk": 1,
+    "tjednoSati": 40,
+    "dnevnoSati": 8,
+    "godisnji": 20
+  },
+  "vrstaUgovorRadFk": 1,
+  "brutoPlaca": 1320.5
+}
+
+/radno-mjesto-controller/createRadnoMjesto
+{
+  "naziv": "Developer/ica aplikativnih rješenja!"
+}
+
+/radnik-controller/createRadnik
+{
+  "radnikNadredFk": 1,
+  "ime": "Luka",
+  "prezime": "Lukić",
+  "oib": "84789698705",
+  "spolFk": 1,
+  "datumRod": "2001-01-01",
+  "radnikVrstaFk": 1
+}
+
+/radnik-prebivaliste-controller/createRadnikPrebivaliste
+{
+  "radnikFk": 1,
+  "mjestoFk": 1,
+  "ulica": "Test",
+  "kucniBr": "Test1"
+}
+
+/radnik-odjel-controller/createRadnikOdjel
+{
+  "radnikFk": 1,
+  "odjelFk": 2,
+  "datumOd": "2024-01-01",
+  "datumDo": "2024-12-31"
+}
+
+/odjel-controller/createOdjel
+{
+  "naziv": "Razvoj!"
+}
+
+/evidencija-snimka-controller/createEvidencijaSnimka
+{
+  "datumOd": "2024-07-01",
+  "datumDo": "2024-07-31",
+  "radnikFk": 1,
+  "snimka": "dGVzdA==",
+  "datum": "2024-07-15"
+}
+
+/evidencija-rad-controller/createEvidencijaRad
+{
+  "radnikFk": 1,
+  "datum": "2024-07-01",
+  "pocetak": "08:00:00",
+  "kraj": "16:00:00",
+  "ukupnoRedovno": 8,
+  "redovno": 8,
+  "prekovr": 0,
+  "zastoj": 0,
+  "strajk": 0,
+  "lockout": 0,
+  "prerasp": 0,
+  "bolDo42": 0,
+  "bolOd42": 0,
+  "godisnji": 0,
+  "godisnjiPlacen": 0,
+  "praznik": 0,
+  "ukupnoSati": 8,
+  "nedjeljaPov": 0,
+  "praznikPov": 0,
+  "nocPov": 0,
+  "smjenaPov": 0,
+  "dvokrPov": 0,
+  "ostaloPov": 0,
+  "pripr": 0,
+  "odmor": 0,
+  "odsut": 0
+}
